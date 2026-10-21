@@ -1,0 +1,22 @@
+{
+  "name": "waveletscope",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "WaveletScope — Wavelet Tree-based software dependency risk intelligence and release comparison (DSA case study)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --disable-warning=ExperimentalWarning --test \"tests/*.test.ts\"",
+    "test:e2e": "node e2e/smoke.mjs",
+    "test:algorithms": "node --experimental-strip-types --disable-warning=ExperimentalWarning --test tests/waveletTree.test.ts tests/graph.test.ts tests/risk.test.ts tests/release.test.ts"
+  },
+  "dependencies": { "react": "^18.3.1", "react-dom": "^18.3.1" },
+  "devDependencies": {
+    "@types/node": "^22.5.0", "@types/react": "^18.3.3", "@types/react-dom": "^18.3.0", "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.5.4", "vite": "^5.4.2"
+  },
+  "engines": { "node": ">=22.6" }
+}
